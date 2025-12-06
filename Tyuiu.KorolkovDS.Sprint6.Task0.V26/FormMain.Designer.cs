@@ -105,6 +105,7 @@
             pictureBoxFormula_KDS.Size = new Size(229, 144);
             pictureBoxFormula_KDS.TabIndex = 6;
             pictureBoxFormula_KDS.TabStop = false;
+            pictureBoxFormula_KDS.Click += pictureBoxFormula_KDS_Click;
             // 
             // textBoxInPutX_KDS
             // 
@@ -133,7 +134,7 @@
             textBoxResult_KDS.ReadOnly = true;
             textBoxResult_KDS.Size = new Size(229, 71);
             textBoxResult_KDS.TabIndex = 9;
-            
+            textBoxResult_KDS.TextChanged += textBoxResult_KDS_TextChanged;
             // 
             // FormMain
             // 

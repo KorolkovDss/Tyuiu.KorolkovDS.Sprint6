@@ -40,10 +40,10 @@ namespace Tyuiu.KorolkovDS.Sprint6.Task0.V26
 
         private void textBoxInPutX_KDS_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
-        
+
 
         private void textBoxInPutX_KDS_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -51,6 +51,16 @@ namespace Tyuiu.KorolkovDS.Sprint6.Task0.V26
             {
                 e.Handled = true;
             }
+        }
+
+        private void pictureBoxFormula_KDS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxResult_KDS_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
