@@ -7,40 +7,32 @@ namespace Tyuiu.KorolkovDS.Sprint6.Task7.V24.Lib
     {
         public int[,] GetMatrix(string path)
         {
-           
-            int rows;
-            int colums;
-            string fileData = File.ReadAllText(path=Path.GetFullPath("InPutDataFileTask7V24.csv"));
 
-            fileData = fileData.Replace("\n", "\r");
-            string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
+            int rows = File.ReadLines(path).Count();
+            string[] strings = File.ReadAllText(path).Split("\n");
+            int columns = strings[0].Split(';').Length;
+            int[,] matrix = new int[rows, columns];
 
-            rows = lines.Length;
-            colums = lines[0].Split(';').Length;
-
-            int[,] aValues = new int[rows, colums];
-
-            for (int r = 0; r < rows; r++)
+            using (StreamReader stream = new StreamReader(path))
             {
-                string[] lines_r = lines[r].Split(';');
-                for (int c = 0; c < colums; c++)
+                string line;
+                int count = 0;
+                while ((line = stream.ReadLine()) != null)
                 {
-                    aValues[r, c] = Convert.ToInt32(lines_r[c]);
-                }
-            }
-            int xRow = 1;
-
-            for (int i = xRow; i <= xRow; i++)
-            {
-                for (int j = 0; j < colums; j++)
-                {
-                    if (aValues[i, j] % 2 == 0)
+                    string[] row = line.Split(';');
+                    for (int i = 0; i < columns; i++)
                     {
-                        aValues[i, j] = 1;
+                        matrix[count, i] = Convert.ToInt32(row[i]);
                     }
+                    count++;
                 }
             }
-            return aValues;
+
+            for (int j = 0; j < columns; j++)
+            {
+                if (matrix[1, j] % 2 == 0) matrix[1, j] = 1;
+            }
+            return matrix;
         }
     }
 }
