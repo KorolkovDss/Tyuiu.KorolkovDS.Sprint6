@@ -7,10 +7,10 @@ namespace Tyuiu.KorolkovDS.Sprint6.Task7.V24.Lib
     {
         public int[,] GetMatrix(string path)
         {
-           path = Path.GetFullPath("InPutDataFileTask7V24.csv");
+           
             int rows;
             int colums;
-            string fileData = File.ReadAllText(path);
+            string fileData = File.ReadAllText(path=Path.GetFullPath("InPutDataFileTask7V24.csv"));
 
             fileData = fileData.Replace("\n", "\r");
             string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
