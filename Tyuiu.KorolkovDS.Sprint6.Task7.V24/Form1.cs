@@ -14,7 +14,7 @@ namespace Tyuiu.KorolkovDS.Sprint6.Task7.V24
 
         static int rows;
         static int columns;
-        string path;
+        string path =  Path.GetFullPath("InPutDataFileTask7V24.csv");
         DataService ds = new DataService();
 
         public static int[,] LoadFromFileData(string filepath)
