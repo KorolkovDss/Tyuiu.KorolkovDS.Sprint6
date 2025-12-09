@@ -6,7 +6,7 @@ namespace Tyuiu.KorolkovDS.Sprint6.Task6.V19.Lib
     {
         public string CollectTextFromFile(string path)
         {
-            path = $@"{Directory.GetCurrentDirectory()}\InPutDataFileTask6V19.txt";
+            
             string fileContent = File.ReadAllText(path);
             string[] words = fileContent.Split(new[] { ' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
