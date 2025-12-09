@@ -1,4 +1,5 @@
-﻿using tyuiu.cources.programming.interfaces.Sprint6;
+﻿using System.Runtime.CompilerServices;
+using tyuiu.cources.programming.interfaces.Sprint6;
 
 namespace Tyuiu.KorolkovDS.Sprint6.Task7.V24.Lib
 {
@@ -6,7 +7,7 @@ namespace Tyuiu.KorolkovDS.Sprint6.Task7.V24.Lib
     {
         public int[,] GetMatrix(string path)
         {
-            
+           path = Path.GetFullPath("InPutDataFileTask7V24.csv");
             int rows;
             int colums;
             string fileData = File.ReadAllText(path);
