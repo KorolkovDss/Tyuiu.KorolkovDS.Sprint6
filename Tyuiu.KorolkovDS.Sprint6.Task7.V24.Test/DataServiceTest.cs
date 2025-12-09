@@ -1,4 +1,5 @@
-﻿using Tyuiu.KorolkovDS.Sprint6.Task7.V24.Lib;
+﻿using System.IO;
+using Tyuiu.KorolkovDS.Sprint6.Task7.V24.Lib;
 
 namespace Tyuiu.KorolkovDS.Sprint6.Task7.V24.Test
 {
@@ -9,7 +10,7 @@ namespace Tyuiu.KorolkovDS.Sprint6.Task7.V24.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            string path = @$"C:\DataSprint6\InPutDataFileTask7V24.csv";
+            string path = Path.GetFullPath("InPutDataFileTask7V24.csv");
             int[,] waitArray = { { -19, -4, 13, -11, -15, 5, -12, 20, 3, -19 },
                                  { -17, 1, 5, 1, 1, 1, 1, 1, 1, -5 },
                                  { 11,-11,-10,16,18,13,-17,-13,1,4 },
