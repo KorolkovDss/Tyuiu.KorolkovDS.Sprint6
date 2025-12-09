@@ -6,7 +6,7 @@ namespace Tyuiu.KorolkovDS.Sprint6.Task7.V24.Lib
     {
         public int[,] GetMatrix(string path)
         {
-            string Path = @"C:\DataSprint6\InPutDataFileTask7V24.csv";
+            string Path = @$"C:\DataSprint6\InPutDataFileTask7V24.csv";
             int rows;
             int colums;
             string fileData = File.ReadAllText(Path);
